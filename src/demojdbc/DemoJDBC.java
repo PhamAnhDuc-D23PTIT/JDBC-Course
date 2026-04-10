@@ -8,7 +8,8 @@ package demojdbc;
     4,Create the statement
     5,Execute the querry
     6,Process result
-    
+    7,Close connectivity
+    We have 7 steps, remember that
 */
 import java.sql.*;
 public class DemoJDBC{
@@ -24,6 +25,9 @@ public class DemoJDBC{
         result.next();
         String name = result.getString("name");
         System.out.println(name);
+        con.close();
+       st.close();
+      
         
     }
 }
